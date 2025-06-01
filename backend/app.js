@@ -1,11 +1,11 @@
 const express = require('express');
 const app = express();
-const PORT = 5000;
+const PORT = 5001;
 
-app.get('/', (req, res) => {
-  res.send('API do OctoClinic rodando!');
+app.get('/ping', (req, res) => {
+  res.send('pong');
 });
 
 app.listen(PORT, () => {
-  console.log(`Servidor backend rodando na porta ${PORT}`);
+  console.log(`Servidor rodando na porta ${PORT}`);
 });
