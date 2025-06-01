@@ -1,2 +1,3 @@
 # OctoClinic
-Sistema de gestão de clínicas com IA e WhatsApp.
+
+Sistema de gestão de clínicas com IA, WhatsApp e prontuário eletrônico.
