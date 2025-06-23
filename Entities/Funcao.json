@@ -1,0 +1,17 @@
+{
+  "name": "Funcao",
+  "type": "object",
+  "properties": {
+    "nome": {
+      "type": "string",
+      "description": "Nome da função (Ex: Enfermeiro Chefe)"
+    },
+    "descricao": {
+      "type": "string",
+      "description": "Breve descrição das responsabilidades da função"
+    }
+  },
+  "required": [
+    "nome"
+  ]
+}

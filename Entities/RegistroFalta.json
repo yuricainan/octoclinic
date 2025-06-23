@@ -1,0 +1,75 @@
+{
+  "name": "RegistroFalta",
+  "type": "object",
+  "properties": {
+    "funcionario_id": {
+      "type": "string",
+      "description": "ID do funcionário"
+    },
+    "plantao_id": {
+      "type": "string",
+      "description": "ID do plantão afetado"
+    },
+    "data_falta": {
+      "type": "string",
+      "format": "date",
+      "description": "Data da falta"
+    },
+    "tipo": {
+      "type": "string",
+      "enum": [
+        "falta",
+        "atraso",
+        "saida_antecipada"
+      ],
+      "description": "Tipo de registro"
+    },
+    "motivo": {
+      "type": "string",
+      "enum": [
+        "doenca",
+        "problema_familiar",
+        "transporte",
+        "outros"
+      ],
+      "description": "Motivo da falta/atraso"
+    },
+    "justificativa": {
+      "type": "string",
+      "description": "Justificativa detalhada"
+    },
+    "arquivo_anexo_url": {
+      "type": "string",
+      "description": "URL do arquivo de justificativa (atestado, etc.)"
+    },
+    "horas_perdidas": {
+      "type": "number",
+      "description": "Quantidade de horas perdidas"
+    },
+    "aprovado_por": {
+      "type": "string",
+      "description": "Gestor que aprovou/rejeitou"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pendente",
+        "aprovado",
+        "rejeitado"
+      ],
+      "default": "pendente",
+      "description": "Status da justificativa"
+    },
+    "data_aprovacao": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data e hora da aprovação"
+    }
+  },
+  "required": [
+    "funcionario_id",
+    "data_falta",
+    "tipo",
+    "motivo"
+  ]
+}

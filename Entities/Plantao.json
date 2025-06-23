@@ -1,0 +1,67 @@
+{
+  "name": "Plantao",
+  "type": "object",
+  "properties": {
+    "funcionario_id": {
+      "type": "string",
+      "description": "ID do funcionário escalado"
+    },
+    "data_inicio": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data e hora de início do plantão"
+    },
+    "data_fim": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data e hora de fim do plantão"
+    },
+    "setor_id": {
+      "type": "string",
+      "description": "ID do setor do plantão"
+    },
+    "turno": {
+      "type": "string",
+      "enum": [
+        "manha",
+        "tarde",
+        "noite",
+        "integral"
+      ],
+      "description": "Turno do plantão"
+    },
+    "tipo": {
+      "type": "string",
+      "enum": [
+        "regular",
+        "extra",
+        "troca",
+        "cobertura"
+      ],
+      "default": "regular",
+      "description": "Tipo do plantão"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "agendado",
+        "em_andamento",
+        "concluido",
+        "cancelado"
+      ],
+      "default": "agendado",
+      "description": "Status do plantão"
+    },
+    "observacoes": {
+      "type": "string",
+      "description": "Observações sobre o plantão"
+    }
+  },
+  "required": [
+    "funcionario_id",
+    "data_inicio",
+    "data_fim",
+    "setor_id",
+    "turno"
+  ]
+}

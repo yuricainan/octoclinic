@@ -1,0 +1,71 @@
+{
+  "name": "Notificacao",
+  "type": "object",
+  "properties": {
+    "destinatario_id": {
+      "type": "string",
+      "description": "ID do usuário destinatário"
+    },
+    "titulo": {
+      "type": "string",
+      "description": "Título da notificação"
+    },
+    "mensagem": {
+      "type": "string",
+      "description": "Mensagem da notificação"
+    },
+    "tipo": {
+      "type": "string",
+      "enum": [
+        "troca_pendente",
+        "plantao_proximo",
+        "falta_registrada",
+        "aprovacao_necessaria",
+        "ocorrencia_nova",
+        "sistema"
+      ],
+      "description": "Tipo de notificação"
+    },
+    "prioridade": {
+      "type": "string",
+      "enum": [
+        "baixa",
+        "media",
+        "alta",
+        "critica"
+      ],
+      "default": "media",
+      "description": "Prioridade da notificação"
+    },
+    "lida": {
+      "type": "boolean",
+      "default": false,
+      "description": "Se a notificação foi lida"
+    },
+    "data_leitura": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data e hora da leitura"
+    },
+    "referencia_tipo": {
+      "type": "string",
+      "enum": [
+        "plantao",
+        "troca",
+        "falta",
+        "ocorrencia"
+      ],
+      "description": "Tipo de entidade referenciada"
+    },
+    "referencia_id": {
+      "type": "string",
+      "description": "ID da entidade referenciada"
+    }
+  },
+  "required": [
+    "destinatario_id",
+    "titulo",
+    "mensagem",
+    "tipo"
+  ]
+}

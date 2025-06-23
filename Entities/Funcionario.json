@@ -1,0 +1,87 @@
+{
+  "name": "Funcionario",
+  "type": "object",
+  "properties": {
+    "nome_completo": {
+      "type": "string",
+      "description": "Nome completo do funcionário"
+    },
+    "cpf": {
+      "type": "string",
+      "description": "CPF do funcionário"
+    },
+    "telefone": {
+      "type": "string",
+      "description": "Telefone de contato"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Email do funcionário"
+    },
+    "endereco": {
+      "type": "string",
+      "description": "Endereço completo"
+    },
+    "data_nascimento": {
+      "type": "string",
+      "format": "date",
+      "description": "Data de nascimento"
+    },
+    "data_admissao": {
+      "type": "string",
+      "format": "date",
+      "description": "Data de admissão"
+    },
+    "funcao_id": {
+      "type": "string",
+      "description": "ID da função do funcionário"
+    },
+    "cbo": {
+      "type": "string",
+      "description": "Código Brasileiro de Ocupações"
+    },
+    "setor_id": {
+      "type": "string",
+      "description": "ID do setor de atuação"
+    },
+    "escala_padrao_id": {
+      "type": "string",
+      "description": "ID da escala padrão de trabalho"
+    },
+    "carga_horaria_semanal": {
+      "type": "number",
+      "description": "Carga horária semanal em horas"
+    },
+    "salario": {
+      "type": "number",
+      "description": "Salário base"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ativo",
+        "inativo",
+        "ferias",
+        "licenca"
+      ],
+      "default": "ativo",
+      "description": "Status atual do funcionário"
+    },
+    "foto_url": {
+      "type": "string",
+      "description": "URL da foto do funcionário"
+    },
+    "observacoes": {
+      "type": "string",
+      "description": "Observações gerais"
+    }
+  },
+  "required": [
+    "nome_completo",
+    "cpf",
+    "funcao_id",
+    "setor_id",
+    "escala_padrao_id"
+  ]
+}

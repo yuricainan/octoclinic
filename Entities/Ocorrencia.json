@@ -1,0 +1,100 @@
+{
+  "name": "Ocorrencia",
+  "type": "object",
+  "properties": {
+    "titulo": {
+      "type": "string",
+      "description": "Título da ocorrência"
+    },
+    "tipo": {
+      "type": "string",
+      "enum": [
+        "incidente_paciente",
+        "problema_equipamento",
+        "conflito_equipe",
+        "procedimento_inadequado",
+        "medicacao",
+        "outros"
+      ],
+      "description": "Tipo de ocorrência"
+    },
+    "descricao": {
+      "type": "string",
+      "description": "Descrição detalhada da ocorrência"
+    },
+    "setor_id": {
+      "type": "string",
+      "description": "ID do setor onde ocorreu"
+    },
+    "funcionario_relator_id": {
+      "type": "string",
+      "description": "ID do funcionário que relatou"
+    },
+    "funcionarios_envolvidos": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "IDs dos funcionários envolvidos"
+    },
+    "paciente_envolvido": {
+      "type": "string",
+      "description": "Nome/código do paciente (opcional)"
+    },
+    "data_ocorrencia": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data e hora da ocorrência"
+    },
+    "gravidade": {
+      "type": "string",
+      "enum": [
+        "baixa",
+        "media",
+        "alta",
+        "critica"
+      ],
+      "description": "Nível de gravidade"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pendente",
+        "em_investigacao",
+        "resolvida",
+        "arquivada"
+      ],
+      "default": "pendente",
+      "description": "Status da ocorrência"
+    },
+    "responsavel_resolucao_id": {
+      "type": "string",
+      "description": "ID do responsável pela resolução"
+    },
+    "acoes_tomadas": {
+      "type": "string",
+      "description": "Ações tomadas para resolver"
+    },
+    "data_resolucao": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data e hora da resolução"
+    },
+    "anexos_urls": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "URLs de arquivos anexos"
+    }
+  },
+  "required": [
+    "titulo",
+    "tipo",
+    "descricao",
+    "setor_id",
+    "funcionario_relator_id",
+    "data_ocorrencia",
+    "gravidade"
+  ]
+}

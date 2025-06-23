@@ -1,0 +1,61 @@
+{
+  "name": "TrocaPlantao",
+  "type": "object",
+  "properties": {
+    "funcionario_solicitante_id": {
+      "type": "string",
+      "description": "ID do funcionário que solicita a troca"
+    },
+    "funcionario_substituto_id": {
+      "type": "string",
+      "description": "ID do funcionário substituto"
+    },
+    "plantao_original_id": {
+      "type": "string",
+      "description": "ID do plantão original"
+    },
+    "plantao_troca_id": {
+      "type": "string",
+      "description": "ID do plantão oferecido em troca (opcional)"
+    },
+    "motivo_solicitacao": {
+      "type": "string",
+      "description": "Motivo da solicitação de troca"
+    },
+    "data_solicitacao": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data e hora da solicitação"
+    },
+    "aprovado_por": {
+      "type": "string",
+      "description": "Gestor que aprovou/rejeitou"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pendente",
+        "aprovado",
+        "rejeitado",
+        "cancelado"
+      ],
+      "default": "pendente",
+      "description": "Status da troca"
+    },
+    "data_aprovacao": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data e hora da aprovação"
+    },
+    "observacoes_gestor": {
+      "type": "string",
+      "description": "Observações do gestor"
+    }
+  },
+  "required": [
+    "funcionario_solicitante_id",
+    "funcionario_substituto_id",
+    "plantao_original_id",
+    "motivo_solicitacao"
+  ]
+}
