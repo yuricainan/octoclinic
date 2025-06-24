@@ -18,9 +18,6 @@ Sistema completo para **gestão de equipes em Unidades de Terapia Intensiva (UTI
 📁 Entities/ → Modelos de dados (.json)
 📄 Layout.js → Componente de layout principal
 
-bash
-Copiar
-Editar
 
 ## 💻 Instalação local
 
